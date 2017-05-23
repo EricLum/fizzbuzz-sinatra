@@ -1,0 +1,22 @@
+Tests:
+
+//fizzbuzz
+
+curl -i -X POST -H "Content-Type: application/json" -d'{"word":"fizzbuzz", "max_length":"20"}' http://localhost:4567/api/v1/fizzbuzz  
+
+//fizz
+curl -i -X POST -H "Content-Type: application/json" -d'{"word":"fizz", "max_length":"100"}' http://localhost:4567/api/v1/fizzbuzz  
+
+//buzz
+curl -i -X POST -H "Content-Type: application/json" -d'{"word":"buzz", "max_length":"100"}' http://localhost:4567/api/v1/fizzbuzz  
+
+//other word
+curl -i -X POST -H "Content-Type: application/json" -d'{"word":"banana", "max_length":"100"}' http://localhost:4567/api/v1/fizzbuzz  
+
+
+//Negative numbers
+curl -i -X POST -H "Content-Type: application/json" -d'{"word":"fizz", "max_length":"-1"}' http://localhost:4567/api/v1/fizzbuzz  
+
+//Worst case
+curl -i -X POST -H "Content-Type: application/json" -d'{"word":"banana", "max_length":"-1"}' http://localhost:4567/api/v1/fizzbuzz 
+
